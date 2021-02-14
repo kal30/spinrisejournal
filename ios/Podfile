@@ -21,6 +21,8 @@ target 'spinrisejournal' do
   # post_install do |installer|
   #   flipper_post_install(installer)
   # end
+
+
 end
 
 target 'spinrisejournal-tvOS' do

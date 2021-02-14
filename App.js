@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Feather from 'react-native-vector-icons/Feather';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
               </Text>
+              <Feather name="check-circle" color="green" size={20} />
             </View>
           </View>
         </ScrollView>
