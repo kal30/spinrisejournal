@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
@@ -17,29 +17,22 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Feather from 'react-native-vector-icons/Feather';
+import {NavigationContainer} from '@react-navigation/native';
+import MainDrawer from './navigation/DrawerInApp';
+
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+
 
 export default function App() {
+  
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-              <Feather name="check-circle" color="green" size={20} />
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <NavigationContainer>
+    <MainDrawer />
+    </NavigationContainer>
   );
+
+  
 }
 
 const styles = StyleSheet.create({
