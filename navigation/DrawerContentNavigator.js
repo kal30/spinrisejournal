@@ -12,9 +12,9 @@ export function DrawerContent(props) {
         <Drawer.Section style={styles.drawerSection}>
         <DrawerItem
             icon={({color, size}) => (
-              <Icon name="account-outline" color={color} size={size} />
+              <Icon name="home-outline" color={color} size={size} />
             )}
-            label="Profile"
+            label="Home"
             onPress={() => {
               props.navigation.navigate('ChildSelectionScreen');
             }}
@@ -48,7 +48,10 @@ export function DrawerContent(props) {
             }}
           />
           <DrawerItem
-            label="Toggle drawer"
+          icon={({color, size}) => (
+            <Icon name="close" color={color} size={size} />
+          )}
+            label="Close Menu"
             onPress={() => props.navigation.toggleDrawer()}
           />
         </Drawer.Section>
