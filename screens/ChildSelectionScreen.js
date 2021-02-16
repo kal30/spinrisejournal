@@ -26,23 +26,23 @@ export default function ChildSelectionScreen({navigation}) {
 
           <ToolBarButtonText
             name="Track"
-            title=''
+            title='chat-outline'
             onPress={() => navigation.navigate('Track')}
           />
 
           <ToolBarButtonText
             name="Timeline"
-            title=''
+            title='calendar'
             onPress={() => navigation.navigate('Timeline')}
           />
           <ToolBarButtonText
             name="Charts"
-            title=''
+            title='chart-line'
             onPress={() => navigation.navigate('Chart')}
           />
           <ToolBarButtonText
             name="Reminders"
-            title=''
+            title='bell-outline'
             onPress={() => navigation.navigate('Reminders')}
           />
         </View>

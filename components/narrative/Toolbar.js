@@ -6,6 +6,9 @@ import {
     View,
   } from 'react-native';
   import React, {useState, useEffect} from 'react';
+  import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { black } from 'ansi-colors';
+
   
   export function ToolBarButton(props) {
     return (
@@ -20,7 +23,8 @@ import {
       <View style={styles.boxAround}>
         <TouchableOpacity onPress={props.onPress}>
           <Text style={styles.titleText}>{props.name}</Text>
-          <Text style={styles.imageIcon}>{props.title}</Text>
+          {/* <Text style={styles.imageIcon}>{props.title}</Text> */}
+          <Icon name= {props.title} size={30} color= "#6495ed" style={styles.imageIcon}/>
         </TouchableOpacity>
       </View>
     );
@@ -49,6 +53,6 @@ import {
     },
     imageIcon: {
       textAlign: 'center',
-      fontSize: 20,
+      fontSize: 25,
     },
   });
