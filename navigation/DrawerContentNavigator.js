@@ -10,7 +10,16 @@ export function DrawerContent(props) {
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}>
         <Drawer.Section style={styles.drawerSection}>
-         
+        <DrawerItem
+            icon={({color, size}) => (
+              <Icon name="account-outline" color={color} size={size} />
+            )}
+            label="Profile"
+            onPress={() => {
+              props.navigation.navigate('ChildSelectionScreen');
+            }}
+          />
+
           <DrawerItem
             icon={({color, size}) => (
               <Icon name="account-outline" color={color} size={size} />
